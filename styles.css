@@ -1,0 +1,117 @@
+.trail { /* className for the trail elements */
+position: absolute;
+height: 20px; width: 20px;
+border-radius: 0px;
+background-image: url('sources/heart.png');
+background-size: contain;
+pointer-events: none;
+background-color: transparent !important;
+}
+
+/* body {
+margin: 0;
+padding: 0;
+background-image: url('map.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+height: 100vh;
+} */
+
+.boy {
+width: 300px;
+height: auto;
+background-image: url('sources/boy.png');
+position: absolute;
+top: 30%; /* Initial vertical position */
+left: 10%; /* Initial horizontal position */
+}
+
+.girl {
+width: 400px;
+height: auto;
+position: absolute;
+top: 25%; /* Initial vertical position */
+right: 10%; /* Initial horizontal position */
+}
+
+#frame {
+display: flex;
+justify-content: center;
+position: absolute;
+top: 10%;
+left: 35%;
+width: 24.3rem;
+border: .25rem solid rgb(0, 0, 0);
+border-radius: .25rem;
+}
+  
+.top {
+clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 48%);
+}
+
+.bottom {
+clip-path: polygon(0% 52%, 100% 52%, 100% 100%, 0% 100%);
+}
+
+.dial {
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: monospace;
+width: 5.6rem;
+height: 5.6rem;
+padding: .25rem;
+text-align: center;
+font-weight: bold;
+perspective: 20rem;
+}
+
+.dial span {
+position: absolute;
+background-color: black;
+color: white;
+padding: .5rem;
+font-size: 4rem;
+transition: all 400ms linear;
+}
+
+#embeddedWindow {
+display: none; /* Initially hide the embedded window */
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 80%; /* Adjust width as needed */
+height: 65%; /* Adjust height as needed */
+border: 2px solid #ccc;
+background-color: #f7fb8c;
+font-family: Arial, sans-serif;
+}
+
+.envelope {
+    width: 100px;
+    height: auto;
+    background-color: transparent;
+}
+
+#openButton {
+    position: fixed;
+    top: 70%;
+    left: 45%;
+}
+
+#closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.close {
+    width: 50px;
+    height: auto;
+}
