@@ -80,7 +80,7 @@ animate();
 const boy = document.querySelector('.boy');
 const girl = document.querySelector('.girl');
 const started = new Date("2024-05-16T00:00:00");
-const targetDate = new Date("2024-07-06T00:00:00");
+const targetDate = new Date("2024-07-11T20:00:00");
 const startPosition = boy.x;
 const diff = girl.x - boy.x;
 
