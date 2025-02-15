@@ -98,7 +98,7 @@ font-family: Arial, sans-serif;
 #openButton {
     position: fixed;
     top: 70%;
-    left: 50%;
+    left: 45%;
 }
 
 #closeButton {
@@ -114,4 +114,23 @@ font-family: Arial, sans-serif;
 .close {
     width: 50px;
     height: auto;
+}
+
+.photo-button {
+    top: 67%;
+    left: 55%;
+    position: fixed;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.photo-button:hover {
+    background-color: tansparent;;
+}
+
+.camera-icon {
+    width: 130px;
+    height: 130px;
+    background-color: transparent;
 }
