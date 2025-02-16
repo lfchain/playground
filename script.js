@@ -81,7 +81,7 @@ const boy = document.querySelector('.boy');
 const girl = document.querySelector('.girl');
 const started = new Date("2025-02-16T00:00:00");
 const targetDate = new Date("2025-05-01T00:00:00");
-const startPosition = boy.x;
+const startPosition = girl.x;
 const diff = girl.x - boy.x;
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -89,13 +89,13 @@ document.addEventListener('DOMContentLoaded', function () {
         let now = new Date();
         let position = startPosition + diff * ((now.getTime() - started.getTime()) / (targetDate.getTime() - started.getTime()));
         if (now.getTime() <= targetDate.getTime()) {
-            boy.style.left = position + 'px';
+            girl.style.left = position - 'px';
         } else {
-            boy.style.left = girl.x + 'px';
+            girl.style.left = boy.x - 'px';
         }
 
         // Check if the point has moved out of the screen
-        if (position <= girl.x) {
+        if (position >= boy.x) {
             requestAnimationFrame(movePoint);
         }
     }

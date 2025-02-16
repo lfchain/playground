@@ -48,7 +48,10 @@
 <body>
     <div class="photo-container">
         <div class="photo-viewer">
-            <img id="currentPhoto" class="photo-display" src="sources/boy_orig.png" alt="Photo">
+            <img id="currentPhoto" class="photo-display" src="sources/image_1.jpg" alt="Photo">
+            <div style="text-align: center;">
+                <p id="photoCaption" class="photo-caption"></p>
+            </div>
             <div class="photo-controls">
                 <button onclick="previousPhoto()">Previous</button>
                 <button onclick="nextPhoto()">Next</button>
@@ -59,12 +62,36 @@
     <script>
         let currentIndex = 0;
         const photos = [
-            'sources/boy_orig.png',
-            'sources/boy.png',
-            'sources/girl.png',
-            'sources/girl1.png',
-            'sources/girl2.png',
-            // Add more photo URLs here
+            'sources/image_1.jpg',
+            'sources/image_2.jpg', 
+            'sources/image_3.jpg',
+            'sources/image_4.jpg',
+            'sources/image_5.jpg',
+            'sources/image_6.jpg',
+            'sources/image_7.jpg',
+            'sources/image_8.jpg',
+            'sources/image_9.jpg',
+            'sources/image_10.jpg',
+            'sources/image_11.jpg',
+            'sources/image_12.jpg',
+        ];
+
+        const captions = [
+            'It was the first time that we met. You were so beautiful. The orange light of the sunset was perfect. Nice to meet you, Ofsi! ',
+            'I was so nervous when I sent my first text message. So glad that you didn\'t just leave me on read. I started to find a liking in you.',
+            'At the time, I knew you were having a tough time. I was really trying to put a smile on your face.', 
+            'Time to go back home. I was thinking that was it. We are probably never going to see each other again.',
+            'I was so happy when I got your text. I was so excited that we can have another chance to see each other.',
+            'My dream actually came true. Here we were in New York City. I hope you enjoyed the trip.',
+            'We talked about everything and I knew about everything. Everything didn\'t matter as much as you. I was so happy that we could be together.',
+            'After 5 whole months, I finally got to see you again. I was so sure that this was going to be a great trip. I would have all of my questions answered.',
+            'Why did things go so wrong? What happened? I don\'t really know. I just want to leave.',
+            'Babe, I don\'t ever blame you for anything. Sometimes, we need a fight to really understand each other and see how much we mean to each other. I love you.',
+            'Finally, we went on a trip. Everything was like dream until this moment. This must be one of the happiest moments of my life.',
+            
+            "So much things have happened since we first met. You know what I have seen in you. You have shown me how to be" +
+            "Optimistic when one is at their lowest; how to choose your Felicity in every situation; how to appreciate every" + 
+            "serendipitous encounter; what it means to have an Idyllic life together. Happy First Anniversary, my love. Looking forward to many more years together.",
         ];
 
         function previousPhoto() {
@@ -79,8 +106,13 @@
 
         function updatePhoto() {
             const photoElement = document.getElementById('currentPhoto');
+            const captionElement = document.getElementById('photoCaption');
             photoElement.src = photos[currentIndex];
+            captionElement.textContent = captions[currentIndex];
         }
+
+        // Initialize first caption
+        updatePhoto();
     </script>
 </body>
 </html>
