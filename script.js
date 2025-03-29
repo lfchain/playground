@@ -233,17 +233,18 @@ let refreshInterval = setInterval(function() {
 document.addEventListener('DOMContentLoaded', function () {
     const openButton = document.getElementById('openButton');
     const embeddedWindow = document.getElementById('embeddedWindow');
+    const photoButton = document.getElementById('photo-button');
 
     let closeButton;
 
     openButton.addEventListener('click', function () {
         // Show the embedded window
         embeddedWindow.style.display = 'block';
-        
+        photoButton.style.display = 'none';
         // Load content into the embedded window
         embeddedWindow.innerHTML = `
             <button id="closeButton"><img class="close" src="sources/close.png"></button>
-            <iframe src="embedded_content.html" width="100%" height="100%" frameborder="0"></iframe>
+            <iframe src="embedded_content.html" width="100%" height="100%" frameborder="0" scrolling="yes" style="overflow: auto;"></iframe>
         `;
 
         closeButton = document.getElementById('closeButton');
@@ -253,5 +254,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeEmbeddedWindow() {
         // Hide the embedded window
         embeddedWindow.style.display = 'none';
+        photoButton.style.display = 'block';
     }
 });

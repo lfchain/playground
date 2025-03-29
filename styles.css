@@ -116,7 +116,7 @@ font-family: Arial, sans-serif;
     height: auto;
 }
 
-.photo-button {
+#photo-button {
     top: 67%;
     left: 55%;
     position: fixed;
@@ -125,7 +125,7 @@ font-family: Arial, sans-serif;
     cursor: pointer;
 }
 
-.photo-button:hover {
+#photo-button:hover {
     background-color: tansparent;;
 }
 
